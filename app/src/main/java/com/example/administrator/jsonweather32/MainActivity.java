@@ -6,6 +6,7 @@ import android.os.Looper;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -45,6 +46,7 @@ public class MainActivity extends AppCompatActivity{
         value = (EditText)findViewById(R.id.value);
         value.setText("广州");//初始化，给个初值，方便测试
         sdata = (TextView)findViewById(R.id.showmydata);
+        sdata.setMovementMethod(ScrollingMovementMethod.getInstance());
 
         find.setOnClickListener(new View.OnClickListener() {
             @Override
